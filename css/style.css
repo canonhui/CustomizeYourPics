@@ -1,0 +1,56 @@
+/*---------------------------
+AFFICHAGE GENERAL
+----------------------------*/
+body {
+    background-color: lightgrey;
+    margin : 40px;
+}
+
+/*---------------------------
+CARRE CENTRAL
+----------------------------*/
+.jumbotron {
+    
+    padding:4px;
+    border-radius: 4px ;
+    border-color: #e7e7e7;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);
+}
+.jumbotron .container{
+    margin:4px;
+    padding:4px;
+    width:auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+/*---------------------------
+ POP UP INSCRIPTION CONNECTION
+----------------------------*/
+#connection, #inscription, #edit_pic_info, #name_modify, #password_modify, #email_modify, #unregister, #edit_album { /* N'affiche pas les pop-ups*/
+    display: none;
+}
+#btnConnection, #btnInscription, #btnDeconnection, .btnEdit_pic_info, #btnName_modify, #btnPassword_modify, #btnEmail_modify, #btnUnregister, .btnEdit_album:hover{
+    cursor:pointer;
+}
+
+.btnEdit_album:hover{
+    color:#889837;
+}
+
+/* Fond des pops-up d'inscription et de connection*/
+.fond{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10,10,10,0.65);
+    text-align: center;
+}
+.UI{
+    display: inline-block;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30vh;
+}
