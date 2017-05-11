@@ -1,10 +1,10 @@
 <!doctype html>
 <?php session_start(); include 'config.php'; ?>
 <html>
-	<head>
-		<title>CustomizeYourPics</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
+    <head>
+        <title>CustomizeYourPics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0">
        
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
@@ -20,9 +20,9 @@
 
 
         <link rel="stylesheet" href="css/style.css">
-	</head>
+    </head>
 
-	<body>
+    <body>
         <div id="barreNavigation">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -43,9 +43,9 @@
                 
                 <!-- <li><a href="album.php">Albums</a></li> -->
                 <?php   if(isset($_SESSION['connected']) == 1){
-				echo '
-				<li class="active"><a href="home.php"> My Gallery  <span class="sr-only">(current)</span></a></li>
-				<li class="dropdown">
+                echo '
+                <li class="active"><a href="home.php"> My Gallery  <span class="sr-only">(current)</span></a></li>
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Albums <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="album.php">Create Album</a></li>
@@ -53,20 +53,20 @@
                     </ul>
                 </li>
                 <li><a href="upload.php">Photos Upload</a></li>
-				
+                
               </ul>
               <ul class="nav navbar-nav navbar-right">
-			  <li id=""><a><span class="glyphicon glyphicon-user"></span>    '.$_SESSION['pseudo'].'</a></li>
+              <li id=""><a><span class="glyphicon glyphicon-user"></span>    '.$_SESSION['pseudo'].'</a></li>
               <li id="btnDeconnection"><a><span class="glyphicon glyphicon-off"></span> Déconnection</a></li>
                 ';
-				}
-				else{
-					echo '
-					<li class="active"><a href="index.php">Welcome <span class="sr-only">(current)</span></a></li>
-					<li id="btnInscription"><a><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a id="btnConnection"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					'; 
-				} ?>
+                }
+                else{
+                    echo '
+                    <li class="active"><a href="index.php">Welcome <span class="sr-only">(current)</span></a></li>
+                    <li id="btnInscription"><a><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a id="btnConnection"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    '; 
+                } ?>
                 
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -75,35 +75,48 @@
         </div>
         <div class="jumbotron">
             <div class="container">
-             <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </div>
+            <legend> CustomizeYourPics instructions ! </legend>
+            <p>
+            
+            <div id="img_show">
+            <img src='uploads/LogoCYP.jpg'/>
+
+                </div>
+
+                <ul>
+                    <li>First of all, register on the web via the Sign Up button.</li><br>
+                    <li>Create you first album with the Your album tab.</li><br>
+                    <li>Thanks to the Upload tab, you can select an album and upload your pictures in it.</li><br>
+                    <li>Go to my gallery to see your albums, your photos and apply filters on them !</li><br>
+                    *If needed, you can customize you personal informations at any moment.
+                </ul> </div>
         </div>
 
-		<section id="inscription">
-			<div class="fond">
-				<div class="UI">
-					<form action="inscription.php" method="POST">
-						<label>Login : <br><input type="text" name="pseudo"></label><br>
-						<label>Password : <br><input type="password" name="mdp"></label><br>
-						<label>Répétez votre password : <br><input type="password" name="rmdp"></label><br>
-						<label>Email :  <br><input type="text" name="email"></label><br>
-						<input type="submit" value="Se connecter" class="btn btn-success">
-					</form>
-				</div>
-			</div>
-		</section>
-		<section id="connection">
-			<div class="fond">
-				<div class="UI">
-					<form action="connection.php" method="POST">
-						<label>Login : <br><input type="text" name="pseudo"></label><br>
-						<label>Password : <br><input type="password" name="mdp"></label><br>
-						<input type="submit" value="Se connecter" class="btn btn-success">
-					</form>
-				</div>
-			</div>
-		</section>
+        <section id="inscription">
+            <div class="fond">
+                <div class="UI">
+                    <form action="inscription.php" method="POST">
+                        <label>Login : <br><input type="text" name="pseudo"></label><br>
+                        <label>Password : <br><input type="password" name="mdp"></label><br>
+                        <label>Répétez votre password : <br><input type="password" name="rmdp"></label><br>
+                        <label>Email :  <br><input type="text" name="email"></label><br>
+                        <input type="submit" value="Se connecter" class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="connection">
+            <div class="fond">
+                <div class="UI">
+                    <form action="connection.php" method="POST">
+                        <label>Login : <br><input type="text" name="pseudo"></label><br>
+                        <label>Password : <br><input type="password" name="mdp"></label><br>
+                        <input type="submit" value="Se connecter" class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <script type="text/javascript" src="js/script.js"></script>
-	</body>
+    </body>
 </html>
