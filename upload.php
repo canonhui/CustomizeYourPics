@@ -107,7 +107,7 @@
 						$file_type = $_FILES['file']['type'];
 						$file_size = $_FILES['file']['size'];
 						$file_tmp = $_FILES['file']['tmp_name'];
-						echo $file_tmp;
+						//echo $file_tmp;
 						$pic_info = getimagesize($file_tmp);
 						$random_name = rand();
 						$p_slug = $random_name . '.' . substr($pic_info['mime'], 6);
@@ -143,6 +143,7 @@
 									'idAlbum' => $album_id,
 									'notModifYet' => True,));
 								if($success) {
+									echo "uploads/$idUser/$a_slug/Originals/$p_slug";
 									move_uploaded_file($file_tmp, 'uploads/' . $idUser . '/' . $a_slug . '/Originals/' . $p_slug);
 									copy("uploads/$idUser/$a_slug/Originals/$p_slug", "uploads/$idUser/$a_slug/Main/$p_slug");
 								} else {

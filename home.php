@@ -119,7 +119,7 @@
 							<?php
 								//$imgResize = new ResizeImage("uploads/", 320, 240, false, "img/test_320_240.jpg");
 							?>
-							<img width=200 height=110 alt="No picture for present." />
+							<img height=180 alt="No picture for present." />
 							<br/>
 							<b><?php echo $album_name ?></b>
 						</div>

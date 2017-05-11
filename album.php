@@ -47,8 +47,8 @@
                 
                 <?php   if(isset($_SESSION['connected']) == 1){
         echo '
-        <li class="active"><a href="home.php"> My Gallery  <span class="sr-only">(current)</span></a></li>
-        <li class="dropdown">
+        <li><a href="home.php"> My Gallery  <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Albums <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="album.php">Create Album</a></li>

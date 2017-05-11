@@ -1,12 +1,12 @@
 <?php
 
-//	session_start();
+	session_start();
 	include 'config.php';
-/*
+
 	unset($_SESSION['connected']);
 	unset($_SESSION['pseudo']);
 	unset($_SESSION['idUser']);
-*/	session_destroy();
+//	session_destroy();
 	header('location:index.php');
-    //header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . $location); //marche peut etre autre qu'en localhost
+   //header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . $location); //marche peut etre autre qu'en localhost
 ?>
